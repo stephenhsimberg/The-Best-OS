@@ -93,15 +93,15 @@
         )
     }
 </script>
-<title>The Best OS Demo</title>
-<h2>The Best OS:</h2>
+<title>391 Operating Sysem Demo</title>
+<h2>The Operating System: </h2>
 <hr>
 <div id="screen_container">
     <div id="emu_text"></div>
     <canvas id="emu_screen"></canvas>
     <p id="hint_text">
         <b>Use the mouse to click on appications, and press ESC to exit!<br>
-            <i>Counter and Hello require input from user before exiting.</i><br>
+        <i>Counter and Hello require input from user before exiting.</i><br>
         In terminal, use Tab to autocomplete files & commands, press Alt+F1/F2/F3 to switch terminal,<br>
         and press Ctrl+L to Clear Screen, ESC to exit back to GUI</br>
         Please look at the <a href="./overview.html" target="_blank">Technical Overview</a> page for more information.<br>
@@ -114,17 +114,19 @@
 <div id="known_issue">
     <h3>Known Issues</h3>
     <p>
-        <i>(Only on mac) The emulator has a bug that requires two presses of caps lock to change.</i>
+        <i>(Only in Safari) The emulator has a bug that requires two presses of caps lock to change.</i>
     </p>
 </div>
 <h3>Overview</h3>
 <p>
     <b>Our Operating System is a x86 multitask OS built from scratch.</b> It features:<br>
     <ul>
-        <li>A custom file system</li>
-        <li>Essential drivers and system calls</li>
-        <li>Up to six user applications running in three terminals</li>
-        <li>Scheduler, Virtual RTC, and Virtual Memory.</li>
+        <li>A custom file system.</li>
+        <li>GDT, IDT, with custom Blue Screens on exceptions (try sigtest 0).</li>
+        <li>Mouse, KB, PIT, and a Virtual RTC all having custom drivers with PIC initialization.</li>
+        <li>System Calls invoked through register arguments and int $0x80.</li>
+        <li>Up to six user applications running in three terminals with Round-Robin Scheduler.</li>
+        <li>Virtual Memory supporting both 4kb and 4MB pages.</li>
     </ul>
 </p>
 <hr>
